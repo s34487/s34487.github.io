@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ติดต่อ | My Chinese Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .contact-section {
+            min-height: 80vh;
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 850px;
+            margin: 50px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: #5b0707;
+
+            border: 1px solid #c99b3b;
+
+            padding: 35px 25px;
+
+            transition: .4s;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,.25);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(220,170,60,.2);
+        }
+
+        .contact-icon {
+            font-size: 45px;
+            color: #e5b94f;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: #eac45c;
+            font-size: 24px;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #ffe9b5;
+            line-height: 1.8;
+        }
+
+        .contact-card a {
+            color: #ffe08a;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: white;
+            text-shadow: 0 0 10px #e5b94f;
+        }
+
+        .contact-message {
+            max-width: 700px;
+
+            margin: 50px auto 0;
+
+            padding: 30px;
+
+            border-top: 1px solid #b98b2d;
+            border-bottom: 1px solid #b98b2d;
+
+            color: #ffe9b5;
+
+            line-height: 2;
+        }
+
+        @media (max-width: 700px) {
+
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span>龍</span>
+
+        MY PORTFOLIO
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            หน้าหลัก
+        </a>
+
+        <a href="about.html">
+            เกี่ยวกับฉัน
+        </a>
+
+        <a href="portfolio.html">
+            ผลงาน
+        </a>
+
+        <a href="gallery.html">
+            เกียรติบัตร
+        </a>
+
+        <a href="contact.html">
+            ติดต่อ
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+
+    <p class="section-cn">
+        联系我
+    </p>
+
+    <h2>
+        ติดต่อฉัน
+    </h2>
+
+    <p>
+        หากต้องการติดต่อ สอบถาม หรือพูดคุย
+        สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+    </p>
+
+
+    <div class="contact-box">
+
+
+        <!-- EMAIL -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                ✉
+            </div>
+
+            <h3>
+                Email
+            </h3>
+
+            <p>
+                <a href="mailto:your@email.com">
+                    your@email.com
+                </a>
+            </p>
+
+        </div>
+
+
+
+        <!-- PHONE -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                ☎
+            </div>
+
+            <h3>
+                โทรศัพท์
+            </h3>
+
+            <p>
+                08X-XXX-XXXX
+            </p>
+
+        </div>
+
+
+
+        <!-- FACEBOOK -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                f
+            </div>
+
+            <h3>
+                Facebook
+            </h3>
+
+            <p>
+
+                <a href="#" target="_blank">
+                    Facebook ของฉัน
+                </a>
+
+            </p>
+
+        </div>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                ◎
+            </div>
+
+            <h3>
+                Instagram
+            </h3>
+
+            <p>
+
+                <a href="#" target="_blank">
+                    @username
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="contact-message">
+
+        <p class="section-cn">
+            谢谢你的访问
+        </p>
+
+        <p>
+            ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉัน
+            หวังว่าจะได้มีโอกาสพูดคุยและร่วมสร้างสรรค์
+            ผลงานดี ๆ ไปด้วยกัน
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-dragon">
+        龍
+    </div>
+
+    <p>
+        © 2026 My Chinese Portfolio
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
