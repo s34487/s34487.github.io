@@ -3,37 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ชญานิศ</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #6699FF;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 50px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        h1 { color: #2c3e50; }
-        p { font-size: 18px; line-height: 1.6; }
-    </style>
+
+    <title>My Chinese Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน 👋</h1>
-        <p>สวัสดีครับ! ฉันชื่อ <strong>ชญานิศ (Chayanit)</strong></p>
-        <p>ขณะนี้กำลังศึกษา/สนใจด้าน Chinese Program</p>
-        <p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages!</p>
+<header class="navbar">
+
+    <div class="logo">
+        <span>龍</span>
+        MY PORTFOLIO
     </div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="portfolio.html" class="btn"> ไปที่แฟ้ทสะสมผลงาน</a>
-</div>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="about.html">เกี่ยวกับฉัน</a>
+        <a href="portfolio.html">ผลงาน</a>
+        <a href="gallery.html">แกลเลอรี</a>
+        <a href="contact.html">ติดต่อ</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="chinese">赤金 · 东方 · 艺术</p>
+
+        <h1>
+            ยินดีต้อนรับสู่<br>
+            <span>Portfolio ของฉัน</span>
+        </h1>
+
+        <p>
+            แฟ้มสะสมผลงานที่ได้รับแรงบันดาลใจ
+            จากศิลปะและวัฒนธรรมจีน
+        </p>
+
+        <a class="gold-button" href="portfolio.html">
+            ชมผลงาน
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <div>
+        <p class="section-cn">关于我</p>
+
+        <h2>เกี่ยวกับฉัน</h2>
+
+        <p>
+            สวัสดีค่ะ ฉันเป็นคนที่สนใจด้านการออกแบบ
+            ศิลปะ เทคโนโลยี และการสร้างสรรค์ผลงาน
+            เว็บไซต์นี้รวบรวมผลงานและเรื่องราวต่าง ๆ
+            ของฉันไว้ในธีมจีนแดง–ทอง
+        </p>
+
+        <a class="outline-button" href="about.html">
+            อ่านเพิ่มเติม
+        </a>
+    </div>
+
+    <div class="profile-frame">
+        <img src="images/profile.jpg" alt="Profile">
+    </div>
+
+</section>
+
+
+<section class="works">
+
+    <p class="section-cn">我的作品</p>
+
+    <h2>ผลงานเด่น</h2>
+
+    <div class="work-grid">
+
+        <div class="work-card">
+            <img src="images/work1.jpg">
+            <h3>作品一</h3>
+            <p>ผลงานออกแบบชิ้นที่ 1</p>
+        </div>
+
+        <div class="work-card">
+            <img src="images/work2.jpg">
+            <h3>作品二</h3>
+            <p>ผลงานสร้างสรรค์ชิ้นที่ 2</p>
+        </div>
+
+        <div class="work-card">
+            <img src="images/work3.jpg">
+            <h3>作品三</h3>
+            <p>ผลงานเว็บไซต์และกราฟิก</p>
+        </div>
+
+    </div>
+
+    <a class="gold-button" href="portfolio.html">
+        ดูผลงานทั้งหมด
+    </a>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-dragon">龍</div>
+
+    <p>© 2026 My Chinese Portfolio</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
