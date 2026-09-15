@@ -318,3 +318,41 @@ footer {
     }
 
 }
+.social-box {
+    min-height: 560px;
+    border: 2px solid #d6a928;
+    background: rgba(100, 0, 0, 0.7);
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.social:first-child {
+    border-bottom: 2px solid #d6a928;
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: #f5d77a;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.detail {
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+}
