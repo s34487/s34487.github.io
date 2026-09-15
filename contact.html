@@ -2,100 +2,254 @@
 <html lang="th">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ติดต่อ | My Chinese Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
-
     <style>
 
-        .contact-section {
-            min-height: 80vh;
+        /* ===== พื้นฐาน ===== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #700000, #3b0000);
+            color: #f5d77a;
+        }
+
+
+        /* ===== แถบเมนู ===== */
+
+        nav {
+            height: 100px;
+            background: #650000;
+            border-bottom: 2px solid #d6a928;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo .dragon {
+            font-size: 48px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 38px;
+        }
+
+        .menu div {
+            color: #f5d77a;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu div:hover {
+            color: white;
+        }
+
+
+        /* ===== หัวข้อ ===== */
+
+        .header {
+            text-align: center;
+            padding-top: 35px;
+        }
+
+        .chinese-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+
+        .description {
+            color: white;
+            font-size: 18px;
+            margin-top: 40px;
+        }
+
+
+        /* ===== กล่องทั้งหมด ===== */
+
+        .contact-container {
+            width: 72%;
+            max-width: 1100px;
+
+            margin: 65px auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+
+        /* ===== กล่องซ้าย ===== */
+
+        .left-box {
+            border: 2px solid #d6a928;
+            background: rgba(90, 0, 0, 0.65);
+
+            min-height: 540px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
             text-align: center;
         }
 
-        .contact-box {
-            max-width: 850px;
-            margin: 50px auto 0;
+
+        /* ===== กล่องขวา ===== */
+
+        .right-box {
+            border: 2px solid #d6a928;
+            background: rgba(90, 0, 0, 0.65);
+
+            min-height: 540px;
 
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            grid-template-rows: 1fr 1fr;
         }
 
-        .contact-card {
-            background: #5b0707;
 
-            border: 1px solid #c99b3b;
+        .social {
+            display: flex;
+            flex-direction: column;
 
-            padding: 35px 25px;
+            align-items: center;
+            justify-content: center;
 
-            transition: .4s;
-
-            box-shadow:
-                0 10px 30px rgba(0,0,0,.25);
+            text-align: center;
         }
 
-        .contact-card:hover {
-            transform: translateY(-8px);
-
-            box-shadow:
-                0 15px 35px rgba(220,170,60,.2);
+        .social:first-child {
+            border-bottom: 2px solid #d6a928;
         }
 
-        .contact-icon {
-            font-size: 45px;
-            color: #e5b94f;
+
+        /* ===== ไอคอน ===== */
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .facebook-icon {
+            font-family: Arial, sans-serif;
+            font-size: 58px;
+            font-weight: bold;
+        }
+
+        .instagram-icon {
+            font-size: 60px;
+        }
+
+
+        /* ===== หัวข้อ Email / Facebook / Instagram ===== */
+
+        .contact-title {
+            color: #f5d77a;
+
+            font-size: 30px;
+            font-weight: bold;
 
             margin-bottom: 15px;
         }
 
-        .contact-card h3 {
-            color: #eac45c;
-            font-size: 24px;
 
-            margin-bottom: 10px;
-        }
+        /* ===== ข้อมูล ===== */
 
-        .contact-card p {
-            color: #ffe9b5;
-            line-height: 1.8;
-        }
-
-        .contact-card a {
-            color: #ffe08a;
-            text-decoration: none;
-        }
-
-        .contact-card a:hover {
+        .contact-detail {
             color: white;
-            text-shadow: 0 0 10px #e5b94f;
+
+            font-size: 20px;
+
+            margin-top: 5px;
         }
 
-        .contact-message {
-            max-width: 700px;
 
-            margin: 50px auto 0;
+        /* ===== เส้นด้านล่าง ===== */
 
-            padding: 30px;
+        .bottom-line {
+            width: 60%;
+            height: 2px;
 
-            border-top: 1px solid #b98b2d;
-            border-bottom: 1px solid #b98b2d;
+            background: #d6a928;
 
-            color: #ffe9b5;
-
-            line-height: 2;
+            margin: 60px auto;
         }
 
-        @media (max-width: 700px) {
 
-            .contact-box {
+        /* ===== มือถือ / iPad จอเล็ก ===== */
+
+        @media (max-width: 800px) {
+
+            nav {
+                height: auto;
+                padding: 20px;
+
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .menu {
+                gap: 15px;
+
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu div {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .description {
+                font-size: 15px;
+
+                padding: 0 20px;
+            }
+
+            .contact-container {
+                width: 90%;
+
                 grid-template-columns: 1fr;
+
+                margin-top: 40px;
+            }
+
+            .left-box,
+            .right-box {
+                min-height: 420px;
             }
 
         }
@@ -108,175 +262,169 @@
 <body>
 
 
-<!-- NAVBAR -->
-
-<header class="navbar">
-
-    <div class="logo">
-
-        <span>龍</span>
-
-        MY PORTFOLIO
-
-    </div>
-
+    <!-- =========================
+         เมนูด้านบน
+    ========================== -->
 
     <nav>
 
-        <a href="index.html">
-            หน้าหลัก
-        </a>
+        <div class="logo">
 
-        <a href="about.html">
-            เกี่ยวกับฉัน
-        </a>
+            <div class="dragon">
+                龍
+            </div>
 
-        <a href="portfolio.html">
-            ผลงาน
-        </a>
+            <div>
+                MY PORTFOLIO
+            </div>
 
-        <a href="gallery.html">
-            เกียรติบัตร
-        </a>
+        </div>
 
-        <a href="contact.html">
-            ติดต่อ
-        </a>
+
+        <div class="menu">
+
+            <div>หน้าหลัก</div>
+
+            <div>เกี่ยวกับฉัน</div>
+
+            <div>ผลงาน</div>
+
+            <div>เกียรติบัตร</div>
+
+            <div>ติดต่อ</div>
+
+        </div>
 
     </nav>
 
-</header>
+
+
+    <!-- =========================
+         หัวข้อ
+    ========================== -->
+
+    <div class="header">
+
+        <div class="chinese-title">
+            联 系 我
+        </div>
+
+        <h1>
+            ติดต่อฉัน
+        </h1>
+
+        <div class="description">
+            หากต้องการติดต่อ สอบถาม หรือพูดคุย
+            สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+        </div>
+
+    </div>
 
 
 
-<!-- CONTACT -->
+    <!-- =========================
+         กล่องติดต่อ
+    ========================== -->
 
-<section class="contact-section">
-
-    <p class="section-cn">
-        联系我
-    </p>
-
-    <h2>
-        ติดต่อฉัน
-    </h2>
-
-    <p>
-        หากต้องการติดต่อ สอบถาม หรือพูดคุย
-        สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
-    </p>
+    <div class="contact-container">
 
 
-    <div class="contact-box">
+        <!-- ===== กล่องซ้าย ===== -->
+
+        <div class="left-box">
 
 
-        <!-- EMAIL -->
+            <!-- Email -->
 
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                ✉
+            <div class="icon">
+                ✉️
             </div>
 
-            <h3>
+            <div class="contact-title">
                 Email
-            </h3>
-
-            <p>
-                <a href="ติดต่อ email : samattakachayanit@gmail.com>
-                    your@email.com
-                </a>
-            </p>
-
-        </div>
-
-
-
-        <!-- PHONE -->
-
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                ☎
             </div>
 
-            <h3>
+            <div class="contact-detail">
+                ใส่อีเมลของฉันตรงนี้
+            </div>
+
+
+
+            <!-- โทรศัพท์ -->
+
+            <div
+                class="icon"
+                style="margin-top: 35px;"
+            >
+                ☎️
+            </div>
+
+            <div class="contact-title">
                 โทรศัพท์
-            </h3>
+            </div>
 
-            <p>
+            <div class="contact-detail">
                 083-213-7716
-            </p>
+            </div>
+
 
         </div>
 
 
 
-        <div class="social-box">
+        <!-- ===== กล่องขวา ===== -->
 
-    <div class="social">
+        <div class="right-box">
 
-        <div class="icon">f</div>
 
-        <div class="contact-link">
-            Facebook
-        </div>
+            <!-- Facebook -->
 
-        <div class="detail">
-            ชื่อ Facebook ของฉัน
+            <div class="social">
+
+                <div class="facebook-icon">
+                    f
+                </div>
+
+                <div class="contact-title">
+                    Facebook
+                </div>
+
+                <div class="contact-detail">
+                    ชื่อ Facebook ของฉัน
+                </div>
+
+            </div>
+
+
+
+            <!-- Instagram -->
+
+            <div class="social">
+
+                <div class="instagram-icon">
+                    ◎
+                </div>
+
+                <div class="contact-title">
+                    Instagram
+                </div>
+
+                <div class="contact-detail">
+                    _2pxtcnst
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
 
-    <div class="social">
-
-        <div class="icon">◎</div>
-
-        <div class="contact-link">
-            Instagram
-        </div>
-
-        <div class="detail">
-            _2pxtcnst
-        </div>
-
-    </div>
-
-</div>
 
 
-    <div class="contact-message">
+    <!-- เส้นด้านล่าง -->
 
-        <p class="section-cn">
-            谢谢你的访问
-        </p>
-
-        <p>
-            ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉัน
-            หวังว่าจะได้มีโอกาสพูดคุยและร่วมสร้างสรรค์
-            ผลงานดี ๆ ไปด้วยกัน
-        </p>
-
-    </div>
-
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="footer-dragon">
-        龍
-    </div>
-
-    <p>
-        © 2026 My Chinese Portfolio
-    </p>
-
-</footer>
+    <div class="bottom-line"></div>
 
 
 </body>
