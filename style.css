@@ -12,10 +12,27 @@ body {
 }
 
 
-/* NAVBAR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Noto Serif SC", serif;
+    background:
+        radial-gradient(circle at top, #7d1111, #3b0505 65%);
+    color: #fff4d2;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
-    height: 80px;
+    height: 140px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,33 +40,62 @@ body {
     padding: 0 7%;
 
     background: #570606;
-    border-bottom: 2px solid #c99b3b;
+    border-bottom: 3px solid #c99b3b;
 
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 9999;
 }
 
+
+/* =========================
+   LOGO
+========================= */
+
 .logo {
+    display: flex;
+    align-items: center;
+
+    color: #fff0bd;
     font-weight: 700;
     letter-spacing: 2px;
+    font-size: 28px;
 }
 
 .logo span {
-    font-size: 35px;
+    font-size: 58px;
     color: #e6b84c;
-    margin-right: 10px;
+
+    margin-right: 18px;
 }
+
+
+/* =========================
+   MENU
+========================= */
 
 nav {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 48px;
+
+    position: relative;
+    z-index: 10000;
 }
 
 nav a {
+    display: inline-block;
+
     color: #ffe9a6;
     text-decoration: none;
-    transition: .3s;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    pointer-events: auto;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -58,7 +104,9 @@ nav a:hover {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 720px;
@@ -109,13 +157,15 @@ nav a:hover {
 }
 
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 
 .gold-button,
 .outline-button {
     display: inline-block;
-    margin-top: 20px;
 
+    margin-top: 20px;
     padding: 14px 35px;
 
     text-decoration: none;
@@ -149,7 +199,9 @@ nav a:hover {
 }
 
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 100px 8%;
@@ -188,7 +240,9 @@ h2 {
 }
 
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
 .profile-frame {
     border: 3px solid #c89b38;
@@ -207,7 +261,9 @@ h2 {
 }
 
 
-/* WORKS */
+/* =========================
+   WORKS
+========================= */
 
 .works {
     text-align: center;
@@ -224,12 +280,9 @@ h2 {
 
 .work-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 30px;
-
     margin: 50px 0;
 }
 
@@ -266,10 +319,68 @@ h2 {
 }
 
 
-/* FOOTER */
+/* =========================
+   CONTACT
+========================= */
+
+.social-box {
+    min-height: 560px;
+
+    border: 2px solid #d6a928;
+
+    background: rgba(100, 0, 0, 0.7);
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.social:first-child {
+    border-bottom: 2px solid #d6a928;
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: #f5d77a;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: white;
+}
+
+.detail {
+    margin-top: 15px;
+
+    color: white;
+    font-size: 20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
+
     padding: 60px;
 
     background: #290202;
@@ -279,26 +390,55 @@ footer {
 
 .footer-dragon {
     color: #d7aa43;
+
     font-size: 60px;
+
     margin-bottom: 15px;
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 800px) {
 
     .navbar {
         height: auto;
+
         padding: 20px;
+
         flex-direction: column;
+
         gap: 20px;
     }
 
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo span {
+        font-size: 48px;
+        margin-right: 12px;
+    }
+
     nav {
+        width: 100%;
+
+        display: flex;
+
         flex-wrap: wrap;
         justify-content: center;
+
         gap: 15px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
     }
 
     .intro {
@@ -318,141 +458,12 @@ footer {
     }
 
 }
-.social-box {
-    min-height: 560px;
-    border: 2px solid #d6a928;
-    background: rgba(100, 0, 0, 0.7);
 
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
 
-.social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.social:first-child {
-    border-bottom: 2px solid #d6a928;
-}
-
-.icon {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.contact-link {
-    color: #f5d77a;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.detail {
-    margin-top: 15px;
-    color: white;
-    font-size: 20px;
-}
 /* =========================
-   NAVIGATION FIX
+   ป้องกันส่วนตกแต่งบังเมนู
 ========================= */
 
-.navbar {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 7%;
-
-    background: #570606;
-    border-bottom: 2px solid #c99b3b;
-
-    position: sticky;
-    top: 0;
-    z-index: 99999;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-    position: relative;
-    z-index: 100000;
-}
-
-nav a {
-    display: inline-block;
-    position: relative;
-    z-index: 100001;
-
-    color: #ffe9a6;
-    text-decoration: none;
-
-    cursor: pointer;
-    pointer-events: auto;
-
-    transition: .3s;
-}
-
-nav a:hover {
-    color: white;
-    text-shadow: 0 0 10px #e7b94d;
-}
-
-/* ป้องกัน element ตกแต่งมาบังเมนู */
-.contact::before,
-.contact::after,
-#contact::before,
-#contact::after {
-    pointer-events: none;
-}/* =========================
-   NAVIGATION FIX
-========================= */
-
-.navbar {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 7%;
-
-    background: #570606;
-    border-bottom: 2px solid #c99b3b;
-
-    position: sticky;
-    top: 0;
-    z-index: 99999;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-    position: relative;
-    z-index: 100000;
-}
-
-nav a {
-    display: inline-block;
-    position: relative;
-    z-index: 100001;
-
-    color: #ffe9a6;
-    text-decoration: none;
-
-    cursor: pointer;
-    pointer-events: auto;
-
-    transition: .3s;
-}
-
-nav a:hover {
-    color: white;
-    text-shadow: 0 0 10px #e7b94d;
-}
-
-/* ป้องกัน element ตกแต่งมาบังเมนู */
 .contact::before,
 .contact::after,
 #contact::before,
