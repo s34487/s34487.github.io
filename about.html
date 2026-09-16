@@ -4,736 +4,36 @@
 <head>
 
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>เกี่ยวกับฉัน | My Chinese Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap"
-          rel="stylesheet">
-
-
-    <style>
-
-        /* =========================
-           ABOUT HERO
-        ========================= */
-
-        .about-hero {
-
-            min-height: 500px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            position: relative;
-
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    rgba(70,0,0,.65),
-                    rgba(35,0,0,.9)
-                ),
-                url("images/about-bg.jpg");
-
-            background-size: cover;
-            background-position: center;
-
-        }
-
-
-        .about-hero::before {
-
-            content: "龍";
-
-            position: absolute;
-
-            font-size: 350px;
-
-            color: rgba(221,175,65,.06);
-
-            right: -40px;
-            bottom: -100px;
-
-            transform: rotate(-10deg);
-
-        }
-
-
-        .about-title {
-
-            position: relative;
-            z-index: 2;
-
-        }
-
-
-        .about-title .chinese-title {
-
-            color: #e5b94f;
-
-            font-size: 24px;
-
-            letter-spacing: 12px;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .about-title h1 {
-
-            font-size: clamp(45px, 7vw, 80px);
-
-            color: #fff0bd;
-
-            text-shadow:
-                0 0 20px rgba(220,170,60,.25);
-
-        }
-
-
-        /* =========================
-           PROFILE
-        ========================= */
-
-        .profile-section {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #4b0505,
-                    #720909
-                );
-
-            display: grid;
-
-            grid-template-columns:
-                380px 1fr;
-
-            gap: 70px;
-
-            align-items: center;
-
-        }
-
-
-        .profile-card {
-
-            position: relative;
-
-            padding: 15px;
-
-            background: #2c0202;
-
-            border: 2px solid #c99b3b;
-
-            box-shadow:
-                12px 12px 0 rgba(201,155,59,.15);
-
-            transform: rotate(-2deg);
-
-            transition: .5s;
-
-        }
-
-
-        .profile-card:hover {
-
-            transform:
-                rotate(0deg)
-                translateY(-10px);
-
-            box-shadow:
-                0 20px 50px rgba(0,0,0,.5);
-
-        }
-
-
-        .profile-card img {
-
-            width: 100%;
-
-            display: block;
-
-        }
-
-
-        .seal {
-
-            position: absolute;
-
-            right: -25px;
-            bottom: -25px;
-
-            width: 90px;
-            height: 90px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: #a80808;
-
-            border: 3px solid #e2b84d;
-
-            color: #ffd976;
-
-            font-size: 30px;
-
-            transform: rotate(8deg);
-
-            box-shadow:
-                0 8px 20px rgba(0,0,0,.4);
-
-        }
-
-
-        .profile-text h2 {
-
-            margin-top: 0;
-
-        }
-
-
-        .profile-text p {
-
-            line-height: 2;
-
-            color: #ffe9bb;
-
-            margin-bottom: 18px;
-
-        }
-
-
-        /* =========================
-           INFO CARDS
-        ========================= */
-
-        .info-section {
-
-            text-align: center;
-
-            background: #350303;
-
-        }
-
-
-        .info-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-
-            margin-top: 50px;
-
-        }
-
-
-        .info-card {
-
-            padding: 35px 25px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #650808,
-                    #470303
-                );
-
-            border: 1px solid #a97b26;
-
-            transition: .4s;
-
-            position: relative;
-
-            overflow: hidden;
-
-        }
-
-
-        .info-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 100px;
-            height: 100px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(224,180,70,.2);
-
-            top: -40px;
-            right: -40px;
-
-        }
-
-
-        .info-card:hover {
-
-            transform:
-                translateY(-10px)
-                scale(1.02);
-
-            border-color: #e5b94f;
-
-            box-shadow:
-                0 15px 35px rgba(0,0,0,.4);
-
-        }
-
-
-        .info-icon {
-
-            font-size: 45px;
-
-            margin-bottom: 15px;
-
-            color: #e4b84b;
-
-        }
-
-
-        .info-card h3 {
-
-            color: #e9c45e;
-
-            margin-bottom: 10px;
-
-            font-size: 24px;
-
-        }
-
-
-        .info-card p {
-
-            color: #ffeac0;
-
-            line-height: 1.8;
-
-        }
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills-section {
-
-            background:
-                linear-gradient(
-                    rgba(80,3,3,.95),
-                    rgba(45,1,1,.95)
-                ),
-                url("images/chinese-pattern.jpg");
-
-            background-size: 500px;
-
-            text-align: center;
-
-        }
-
-
-        .skills {
-
-            max-width: 850px;
-
-            margin: 50px auto 0;
-
-            text-align: left;
-
-        }
-
-
-        .skill {
-
-            margin-bottom: 28px;
-
-        }
-
-
-        .skill-name {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            margin-bottom: 8px;
-
-            color: #ffe7a4;
-
-        }
-
-
-        .skill-bar {
-
-            width: 100%;
-
-            height: 10px;
-
-            background: #270101;
-
-            border: 1px solid #76551b;
-
-            overflow: hidden;
-
-        }
-
-
-        .skill-progress {
-
-            height: 100%;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #a97416,
-                    #f0ca62
-                );
-
-            animation: skillAnimation 1.5s ease;
-
-        }
-
-
-        @keyframes skillAnimation {
-
-            from {
-
-                width: 0;
-
-            }
-
-        }
-
-
-        /* =========================
-           TIMELINE
-        ========================= */
-
-        .timeline-section {
-
-            background: #450404;
-
-            text-align: center;
-
-        }
-
-
-        .timeline {
-
-            max-width: 800px;
-
-            margin: 60px auto;
-
-            position: relative;
-
-        }
-
-
-        .timeline::before {
-
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-
-            transform: translateX(-50%);
-
-            width: 2px;
-
-            height: 100%;
-
-            background: #b88a2c;
-
-        }
-
-
-        .timeline-item {
-
-            width: 50%;
-
-            padding: 20px 40px;
-
-            position: relative;
-
-        }
-
-
-        .timeline-item:nth-child(odd) {
-
-            text-align: right;
-
-        }
-
-
-        .timeline-item:nth-child(even) {
-
-            margin-left: 50%;
-
-            text-align: left;
-
-        }
-
-
-        .timeline-dot {
-
-            position: absolute;
-
-            top: 30px;
-
-            width: 16px;
-            height: 16px;
-
-            border-radius: 50%;
-
-            background: #e0b84d;
-
-            border: 3px solid #570606;
-
-            box-shadow:
-                0 0 0 2px #c69b3c;
-
-        }
-
-
-        .timeline-item:nth-child(odd)
-        .timeline-dot {
-
-            right: -8px;
-
-        }
-
-
-        .timeline-item:nth-child(even)
-        .timeline-dot {
-
-            left: -8px;
-
-        }
-
-
-        .timeline-content {
-
-            background: #5d0808;
-
-            border: 1px solid #9f7527;
-
-            padding: 22px;
-
-            transition: .3s;
-
-        }
-
-
-        .timeline-content:hover {
-
-            transform: scale(1.03);
-
-            border-color: #e3b94e;
-
-        }
-
-
-        .timeline-content h3 {
-
-            color: #e5bd55;
-
-            margin-bottom: 8px;
-
-        }
-
-
-        .timeline-content p {
-
-            color: #ffe8b2;
-
-            line-height: 1.7;
-
-        }
-
-
-        /* =========================
-           QUOTE
-        ========================= */
-
-        .quote {
-
-            text-align: center;
-
-            padding: 100px 10%;
-
-            background: #270202;
-
-        }
-
-
-        .quote-symbol {
-
-            font-size: 70px;
-
-            color: #c99b3b;
-
-        }
-
-
-        .quote p {
-
-            max-width: 800px;
-
-            margin: auto;
-
-            font-size: 28px;
-
-            line-height: 1.8;
-
-            color: #ffe8ad;
-
-        }
-
-
-        .quote small {
-
-            display: block;
-
-            margin-top: 20px;
-
-            color: #c89a37;
-
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            .profile-section {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-            .info-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-            .timeline::before {
-
-                left: 10px;
-
-            }
-
-
-            .timeline-item,
-            .timeline-item:nth-child(even) {
-
-                width: 100%;
-
-                margin-left: 0;
-
-                padding-left: 45px;
-
-                padding-right: 0;
-
-                text-align: left;
-
-            }
-
-
-            .timeline-item:nth-child(odd)
-            .timeline-dot,
-            .timeline-item:nth-child(even)
-            .timeline-dot {
-
-                left: 2px;
-
-                right: auto;
-
-            }
-
-
-            .quote p {
-
-                font-size: 21px;
-
-            }
-
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 </head>
-
 
 <body>
 
 
-<!-- =========================
-     NAVBAR
-========================= -->
-
 <header class="navbar">
 
     <div class="logo">
-
         <span>龍</span>
-
         MY PORTFOLIO
-
     </div>
 
-
     <nav>
-
-        <a href="index.html">
-            หน้าหลัก
-        </a>
-
-        <a href="about.html">
-            เกี่ยวกับฉัน
-        </a>
-
-        <a href="portfolio.html">
-            ผลงาน
-        </a>
-
-        <a href="gallery.html">
-            เกียรติบัตร
-        </a>
-
-        <a href="contact.html">
-            ติดต่อ
-        </a>
-
+        <a href="index.html">หน้าหลัก</a>
+        <a href="about.html">เกี่ยวกับฉัน</a>
+        <a href="portfolio.html">ผลงาน</a>
+        <a href="gallery.html">เกียรติบัตร</a>
+        <a href="contact.html">ติดต่อ</a>
     </nav>
 
 </header>
 
-
-
-<!-- =========================
-     ABOUT HERO
-========================= -->
 
 <section class="about-hero">
 
@@ -752,27 +52,13 @@
 </section>
 
 
-
-<!-- =========================
-     PROFILE
-========================= -->
-
 <section class="profile-section">
-
 
     <div class="profile-card">
 
-        <img
-            src="IMG_1229.jpeg"
-            alt="รูปโปรไฟล์"
-        >
-
-        <div class="seal">
-            我
-        </div>
+        <img src="IMG_1229.jpeg" alt="รูปโปรไฟล์">
 
     </div>
-
 
 
     <div class="profile-text">
@@ -790,24 +76,19 @@
         </p>
 
         <p>
-           ชื่อเล่น แพท
-            ปัจจุปันกำลังศึกษาชั้นมัธยมปีที่ 6 
-            แผนการเรียนเตรียมมนุษศาสตร์ภาษาจีน ที่โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-            เกิดเมื่อวันที่ 22 สิงหาคม พ.ศ 2551 อายุ 18 ปี
-            
+            ชื่อเล่น แพท
+            ปัจจุบันกำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
+            แผนการเรียนเตรียมมนุษยศาสตร์ภาษาจีน
+            ที่โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
         </p>
 
         <p>
             Portfolio นี้เป็นพื้นที่ที่รวบรวม
             ตัวตน ความสามารถ ผลงาน
             และประสบการณ์ต่าง ๆ ของฉัน
-            
         </p>
 
-        <a
-            href="portfolio.html"
-            class="gold-button"
-        >
+        <a href="portfolio.html" class="gold-button">
             ดูผลงานของฉัน
         </a>
 
@@ -815,11 +96,6 @@
 
 </section>
 
-
-
-<!-- =========================
-     INFORMATION
-========================= -->
 
 <section class="info-section">
 
@@ -846,11 +122,12 @@
             </h3>
 
             <p>
-               โรงเรียนบ้านบึง“อุตสาหกรรมนุเคราะห์” แผนการเรียนเตรียมมนุษศาสตร์ภาษาจีน
+                โรงเรียนบ้านบึง
+                “อุตสาหกรรมนุเคราะห์”
+                แผนการเรียนเตรียมมนุษยศาสตร์ภาษาจีน
             </p>
 
         </div>
-
 
 
         <div class="info-card">
@@ -864,11 +141,11 @@
             </h3>
 
             <p>
-                ดิฉันสนใจด้านภาษาจีนและด้านธุรกิจ
+                ดิฉันสนใจด้านภาษาจีน
+                และด้านธุรกิจ
             </p>
 
         </div>
-
 
 
         <div class="info-card">
@@ -882,7 +159,9 @@
             </h3>
 
             <p>
-               เข้ามหาวิทยาลัยธรรมศาสตร์ คณะศิลปศาสตร์ และพัฒนาด้านภาษาจีน การพูด ฟัง อ่านและเขียน
+                เข้ามหาวิทยาลัยธรรมศาสตร์
+                คณะศิลปศาสตร์
+                และพัฒนาทักษะภาษาจีน
             </p>
 
         </div>
@@ -892,9 +171,6 @@
 
 </section>
 
-<!-- =========================
-     TIMELINE
-========================= -->
 
 <section class="timeline-section">
 
@@ -921,13 +197,12 @@
                 </h3>
 
                 <p>
-               ศึกษาอยู่ที่โรงเรียนวัฒนดรุณวิทย์
+                    ศึกษาอยู่ที่โรงเรียนวัฒนดรุณวิทย์
                 </p>
 
             </div>
 
         </div>
-
 
 
         <div class="timeline-item">
@@ -937,17 +212,17 @@
             <div class="timeline-content">
 
                 <h3>
-                ชั้นมัธยมศึกษาตอนต้น
+                    ชั้นมัธยมศึกษาตอนต้น
                 </h3>
 
                 <p>
-                   ศึกษาโรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+                    ศึกษาที่โรงเรียนบ้านบึง
+                    อุตสาหกรรมนุเคราะห์
                 </p>
 
             </div>
 
         </div>
-
 
 
         <div class="timeline-item">
@@ -957,11 +232,12 @@
             <div class="timeline-content">
 
                 <h3>
-                   ชั้นมัธยมศึกษาตอนปลาย
+                    ชั้นมัธยมศึกษาตอนปลาย
                 </h3>
 
                 <p>
-                    ศึกษาที่โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+                    ศึกษาที่โรงเรียนบ้านบึง
+                    อุตสาหกรรมนุเคราะห์
                 </p>
 
             </div>
@@ -973,11 +249,6 @@
 
 </section>
 
-
-
-<!-- =========================
-     QUOTE
-========================= -->
 
 <section class="quote">
 
@@ -995,17 +266,8 @@
         ในเวอร์ชันที่ดีกว่าเดิม
     </p>
 
-    <small>
-        — My Portfolio
-    </small>
-
 </section>
 
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1021,5 +283,4 @@
 
 
 </body>
-
 </html>
