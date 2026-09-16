@@ -432,3 +432,27 @@ html {
 }html {
     scroll-behavior: smooth;
 }
+html {
+    scroll-behavior: smooth;
+}
+#contact {
+    z-index: 1;
+}
+
+nav {
+    z-index: 99999 !important;
+}
+
+nav a {
+    cursor: pointer !important;
+}#contact {
+    z-index: 1;
+}
+
+nav {
+    z-index: 99999 !important;
+}
+
+nav a {
+    cursor: pointer !important;
+}
