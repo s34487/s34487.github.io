@@ -2,511 +2,188 @@
 <html lang="th">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>ติดต่อ | My Chinese Portfolio</title>
 
-    <style>
-
-        /* =========================
-           พื้นฐาน
-        ========================= */
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(180deg, #700000, #3b0000);
-            color: #f5d77a;
-        }
-
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        .navbar {
-            width: 100%;
-            height: 140px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 7%;
-
-            background: #650000;
-            border-bottom: 3px solid #d6a928;
-
-            position: relative;
-            z-index: 1000;
-        }
-
-
-        /* =========================
-           LOGO
-        ========================= */
-
-        .logo {
-            display: flex;
-            align-items: center;
-
-            color: #f5d77a;
-
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 2px;
-
-            white-space: nowrap;
-        }
-
-        .logo span {
-            color: #e6b84c;
-
-            font-size: 58px;
-            font-weight: normal;
-
-            margin-right: 18px;
-        }
-
-
-        /* =========================
-           MENU
-        ========================= */
-
-        .navbar nav {
-            display: flex;
-            align-items: center;
-
-            gap: 48px;
-        }
-
-        .navbar nav a {
-            color: #ffe9a6;
-
-            font-size: 21px;
-            font-weight: bold;
-
-            text-decoration: none;
-
-            white-space: nowrap;
-
-            transition: 0.3s;
-        }
-
-        .navbar nav a:hover {
-            color: white;
-            text-shadow: 0 0 10px #e7b94d;
-        }
-
-
-        /* =========================
-           หัวข้อ
-        ========================= */
-
-        .header {
-            text-align: center;
-            padding-top: 50px;
-        }
-
-        .chinese-title {
-            color: #f5d77a;
-
-            font-size: 30px;
-            letter-spacing: 6px;
-
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            margin: 0;
-
-            color: #f5d77a;
-
-            font-size: 52px;
-        }
-
-        .description {
-            color: white;
-
-            font-size: 18px;
-
-            margin-top: 55px;
-        }
-
-
-        /* =========================
-           กล่องทั้งหมด
-        ========================= */
-
-        .contact-container {
-            width: 72%;
-            max-width: 1100px;
-
-            margin: 80px auto;
-
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 35px;
-        }
-
-
-        /* =========================
-           กล่องซ้าย
-        ========================= */
-
-        .left-box {
-            border: 2px solid #d6a928;
-
-            background: rgba(90, 0, 0, 0.65);
-
-            min-height: 560px;
-
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-        }
-
-
-        /* =========================
-           กล่องขวา
-        ========================= */
-
-        .right-box {
-            border: 2px solid #d6a928;
-
-            background: rgba(90, 0, 0, 0.65);
-
-            min-height: 560px;
-
-            display: grid;
-
-            grid-template-rows: 1fr 1fr;
-        }
-
-        .social {
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-        }
-
-        .social:first-child {
-            border-bottom: 2px solid #d6a928;
-        }
-
-
-        /* =========================
-           ไอคอน
-        ========================= */
-
-        .icon {
-            font-size: 55px;
-
-            margin-bottom: 20px;
-        }
-
-        .facebook-icon {
-            font-family: Arial, sans-serif;
-
-            font-size: 58px;
-            font-weight: bold;
-
-            margin-bottom: 15px;
-        }
-
-        .instagram-icon {
-            font-size: 60px;
-
-            margin-bottom: 10px;
-        }
-
-
-        /* =========================
-           ชื่อช่องทาง
-        ========================= */
-
-        .contact-title {
-            color: #f5d77a;
-
-            font-size: 30px;
-            font-weight: bold;
-
-            margin-bottom: 15px;
-        }
-
-
-        /* =========================
-           รายละเอียด
-        ========================= */
-
-        .contact-detail {
-            color: white;
-
-            font-size: 20px;
-
-            margin-top: 5px;
-        }
-
-
-        /* =========================
-           เส้นด้านล่าง
-        ========================= */
-
-        .bottom-line {
-            width: 60%;
-
-            height: 2px;
-
-            background: #d6a928;
-
-            margin: 60px auto;
-        }
-
-
-        /* =========================
-           MOBILE / iPAD
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            .navbar {
-                height: auto;
-
-                padding: 20px;
-
-                flex-direction: column;
-
-                gap: 20px;
-            }
-
-            .logo {
-                font-size: 24px;
-            }
-
-            .logo span {
-                font-size: 48px;
-
-                margin-right: 12px;
-            }
-
-            .navbar nav {
-                width: 100%;
-
-                display: flex;
-
-                flex-wrap: wrap;
-
-                justify-content: center;
-
-                gap: 15px;
-            }
-
-            .navbar nav a {
-                font-size: 15px;
-            }
-
-            .header {
-                padding-top: 35px;
-            }
-
-            .chinese-title {
-                font-size: 25px;
-            }
-
-            h1 {
-                font-size: 38px;
-            }
-
-            .description {
-                font-size: 15px;
-
-                padding: 0 20px;
-
-                margin-top: 35px;
-            }
-
-            .contact-container {
-                width: 90%;
-
-                grid-template-columns: 1fr;
-
-                margin-top: 45px;
-            }
-
-            .left-box,
-            .right-box {
-                min-height: 420px;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
-
 
 <body>
 
 
-    <!-- =========================
-         เมนูด้านบน
-    ========================== -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="logo">
-            <span>龍</span>
-            MY PORTFOLIO
-        </div>
+    <div class="logo">
 
+        <span>龍</span>
 
-        <nav>
-
-            <a href="index.html">หน้าหลัก</a>
-
-            <a href="about.html">เกี่ยวกับฉัน</a>
-
-            <a href="portfolio.html">ผลงาน</a>
-
-            <a href="gallery.html">เกียรติบัตร</a>
-
-            <a href="contact.html">ติดต่อ</a>
-
-        </nav>
-
-    </header>
-
-
-    <!-- =========================
-         หัวข้อ
-    ========================== -->
-
-    <div class="header">
-
-        <div class="chinese-title">
-            联 系 我
-        </div>
-
-        <h1>
-            ติดต่อฉัน
-        </h1>
-
-        <div class="description">
-            หากต้องการติดต่อ สอบถาม หรือพูดคุย
-            สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
-        </div>
+        MY PORTFOLIO
 
     </div>
 
 
-    <!-- =========================
-         กล่องติดต่อ
-    ========================== -->
+    <nav>
 
-    <div class="contact-container">
+        <a href="index.html">หน้าหลัก</a>
 
+        <a href="about.html">เกี่ยวกับฉัน</a>
 
-        <!-- กล่องซ้าย -->
+        <a href="portfolio.html">ผลงาน</a>
 
-        <div class="left-box">
+        <a href="gallery.html">เกียรติบัตร</a>
 
-            <div class="icon">
-                ✉️
-            </div>
+        <a href="contact.html">ติดต่อ</a>
 
-            <div class="contact-title">
-                Email
-            </div>
+    </nav>
 
-            <div class="contact-detail">
-                samattakachayanit@gmail.com
-            </div>
+</header>
 
 
-            <div
-                class="icon"
-                style="margin-top: 35px;"
-            >
-                ☎️
-            </div>
 
-            <div class="contact-title">
-                โทรศัพท์
-            </div>
+<!-- =========================
+     CONTACT TITLE
+========================= -->
 
-            <div class="contact-detail">
-                082-213-7716
-            </div>
+<div class="contact-header">
 
+    <div class="chinese-title">
+        联 系 我
+    </div>
+
+    <h1>
+        ติดต่อฉัน
+    </h1>
+
+    <div class="description">
+
+        หากต้องการติดต่อ สอบถาม หรือพูดคุย
+        สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     CONTACT BOX
+========================= -->
+
+<div class="contact-container">
+
+
+    <!-- =====================
+         LEFT BOX
+    ====================== -->
+
+    <div class="left-box">
+
+
+        <!-- EMAIL -->
+
+        <div class="icon">
+            ✉️
+        </div>
+
+        <div class="contact-title">
+            Email
+        </div>
+
+        <div class="contact-detail">
+            samattakachayanit@gmail.com
         </div>
 
 
-        <!-- กล่องขวา -->
+        <!-- PHONE -->
 
-        <div class="right-box">
+        <div class="icon"
+             style="margin-top: 35px;">
 
-
-            <!-- Facebook -->
-
-            <div class="social">
-
-                <div class="facebook-icon">
-                    f
-                </div>
-
-                <div class="contact-title">
-                    Facebook
-                </div>
-
-                <div class="contact-detail">
-                    -
-                </div>
-
-            </div>
-
-
-            <!-- Instagram -->
-
-            <div class="social">
-
-                <div class="instagram-icon">
-                    ◎
-                </div>
-
-                <div class="contact-title">
-                    Instagram
-                </div>
-
-                <div class="contact-detail">
-                    _2pxtcnst
-                </div>
-
-            </div>
+            ☎️
 
         </div>
+
+        <div class="contact-title">
+            โทรศัพท์
+        </div>
+
+        <div class="contact-detail">
+            082-213-7716
+        </div>
+
 
     </div>
 
 
-    <!-- เส้นด้านล่าง -->
 
-    <div class="bottom-line"></div>
+    <!-- =====================
+         RIGHT BOX
+    ====================== -->
+
+    <div class="right-box">
+
+
+        <!-- FACEBOOK -->
+
+        <div class="social">
+
+            <div class="facebook-icon">
+                f
+            </div>
+
+            <div class="contact-title">
+                Facebook
+            </div>
+
+            <div class="contact-detail">
+                -
+            </div>
+
+        </div>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <div class="social">
+
+            <div class="instagram-icon">
+                ◎
+            </div>
+
+            <div class="contact-title">
+                Instagram
+            </div>
+
+            <div class="contact-detail">
+                _2pxtcnst
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================
+     BOTTOM LINE
+========================= -->
+
+<div class="bottom-line"></div>
 
 
 </body>
