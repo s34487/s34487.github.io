@@ -427,3 +427,8 @@ header a {
 .contact > * {
     position: relative;
 }
+html {
+    scroll-behavior: smooth;
+}html {
+    scroll-behavior: smooth;
+}
