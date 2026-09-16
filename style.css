@@ -356,3 +356,74 @@ footer {
     color: white;
     font-size: 20px;
 }
+/* ===== FIX NAVIGATION ===== */
+
+nav,
+.navbar,
+header {
+    position: relative;
+    z-index: 9999 !important;
+}
+
+/* กัน element ตกแต่งมาบังเมนู */
+.contact::before,
+.contact::after,
+#contact::before,
+#contact::after {
+    pointer-events: none !important;
+}
+
+/* ให้ปุ่มเมนูกดได้เสมอ */
+nav a,
+.navbar a,
+header a {
+    position: relative;
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+}
+
+/* Contact ไม่ให้ครอบทับเมนู */
+.contact,
+#contact {
+    position: relative;
+}
+
+/* ถ้ามีพื้นหลัง/กล่องที่ใช้ absolute */
+.contact > * {
+    position: relative;
+}/* ===== FIX NAVIGATION ===== */
+
+nav,
+.navbar,
+header {
+    position: relative;
+    z-index: 9999 !important;
+}
+
+/* กัน element ตกแต่งมาบังเมนู */
+.contact::before,
+.contact::after,
+#contact::before,
+#contact::after {
+    pointer-events: none !important;
+}
+
+/* ให้ปุ่มเมนูกดได้เสมอ */
+nav a,
+.navbar a,
+header a {
+    position: relative;
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+}
+
+/* Contact ไม่ให้ครอบทับเมนู */
+.contact,
+#contact {
+    position: relative;
+}
+
+/* ถ้ามีพื้นหลัง/กล่องที่ใช้ absolute */
+.contact > * {
+    position: relative;
+}
