@@ -9,111 +9,165 @@
 
     <style>
 
-        /* ===== พื้นฐาน ===== */
+        /* =========================
+           พื้นฐาน
+        ========================= */
 
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(180deg, #700000, #3b0000);
             color: #f5d77a;
         }
 
 
-        /* ===== แถบเมนู ===== */
+        /* =========================
+           NAVBAR
+        ========================= */
 
-        nav {
-            height: 100px;
-            background: #650000;
-            border-bottom: 2px solid #d6a928;
+        .navbar {
+            width: 100%;
+            height: 140px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             padding: 0 7%;
+
+            background: #650000;
+            border-bottom: 3px solid #d6a928;
+
+            position: relative;
+            z-index: 1000;
         }
+
+
+        /* =========================
+           LOGO
+        ========================= */
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 18px;
 
-            font-size: 24px;
+            color: #f5d77a;
+
+            font-size: 28px;
             font-weight: bold;
             letter-spacing: 2px;
+
+            white-space: nowrap;
         }
 
-        .logo .dragon {
-            font-size: 48px;
+        .logo span {
+            color: #e6b84c;
+
+            font-size: 58px;
+            font-weight: normal;
+
+            margin-right: 18px;
         }
 
-        .menu {
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .navbar nav {
             display: flex;
-            gap: 38px;
+            align-items: center;
+
+            gap: 48px;
         }
 
-        .menu div {
-            color: #f5d77a;
-            font-size: 18px;
+        .navbar nav a {
+            color: #ffe9a6;
+
+            font-size: 21px;
             font-weight: bold;
-            cursor: pointer;
+
+            text-decoration: none;
+
+            white-space: nowrap;
+
+            transition: 0.3s;
         }
 
-        .menu div:hover {
+        .navbar nav a:hover {
             color: white;
+            text-shadow: 0 0 10px #e7b94d;
         }
 
 
-        /* ===== หัวข้อ ===== */
+        /* =========================
+           หัวข้อ
+        ========================= */
 
         .header {
             text-align: center;
-            padding-top: 35px;
+            padding-top: 50px;
         }
 
         .chinese-title {
-            font-size: 28px;
-            margin-bottom: 10px;
+            color: #f5d77a;
+
+            font-size: 30px;
+            letter-spacing: 6px;
+
+            margin-bottom: 15px;
         }
 
         h1 {
             margin: 0;
-            font-size: 48px;
+
+            color: #f5d77a;
+
+            font-size: 52px;
         }
 
         .description {
             color: white;
+
             font-size: 18px;
-            margin-top: 40px;
+
+            margin-top: 55px;
         }
 
 
-        /* ===== กล่องทั้งหมด ===== */
+        /* =========================
+           กล่องทั้งหมด
+        ========================= */
 
         .contact-container {
             width: 72%;
             max-width: 1100px;
 
-            margin: 65px auto;
+            margin: 80px auto;
 
             display: grid;
+
             grid-template-columns: 1fr 1fr;
 
-            gap: 30px;
+            gap: 35px;
         }
 
 
-        /* ===== กล่องซ้าย ===== */
+        /* =========================
+           กล่องซ้าย
+        ========================= */
 
         .left-box {
             border: 2px solid #d6a928;
+
             background: rgba(90, 0, 0, 0.65);
 
-            min-height: 540px;
+            min-height: 560px;
 
             display: flex;
             flex-direction: column;
@@ -125,21 +179,25 @@
         }
 
 
-        /* ===== กล่องขวา ===== */
+        /* =========================
+           กล่องขวา
+        ========================= */
 
         .right-box {
             border: 2px solid #d6a928;
+
             background: rgba(90, 0, 0, 0.65);
 
-            min-height: 540px;
+            min-height: 560px;
 
             display: grid;
+
             grid-template-rows: 1fr 1fr;
         }
 
-
         .social {
             display: flex;
+
             flex-direction: column;
 
             align-items: center;
@@ -153,25 +211,35 @@
         }
 
 
-        /* ===== ไอคอน ===== */
+        /* =========================
+           ไอคอน
+        ========================= */
 
         .icon {
             font-size: 55px;
+
             margin-bottom: 20px;
         }
 
         .facebook-icon {
             font-family: Arial, sans-serif;
+
             font-size: 58px;
             font-weight: bold;
+
+            margin-bottom: 15px;
         }
 
         .instagram-icon {
             font-size: 60px;
+
+            margin-bottom: 10px;
         }
 
 
-        /* ===== หัวข้อ Email / Facebook / Instagram ===== */
+        /* =========================
+           ชื่อช่องทาง
+        ========================= */
 
         .contact-title {
             color: #f5d77a;
@@ -183,7 +251,9 @@
         }
 
 
-        /* ===== ข้อมูล ===== */
+        /* =========================
+           รายละเอียด
+        ========================= */
 
         .contact-detail {
             color: white;
@@ -194,10 +264,13 @@
         }
 
 
-        /* ===== เส้นด้านล่าง ===== */
+        /* =========================
+           เส้นด้านล่าง
+        ========================= */
 
         .bottom-line {
             width: 60%;
+
             height: 2px;
 
             background: #d6a928;
@@ -206,27 +279,54 @@
         }
 
 
-        /* ===== มือถือ / iPad จอเล็ก ===== */
+        /* =========================
+           MOBILE / iPAD
+        ========================= */
 
         @media (max-width: 800px) {
 
-            nav {
+            .navbar {
                 height: auto;
+
                 padding: 20px;
 
                 flex-direction: column;
+
                 gap: 20px;
             }
 
-            .menu {
-                gap: 15px;
-
-                flex-wrap: wrap;
-                justify-content: center;
+            .logo {
+                font-size: 24px;
             }
 
-            .menu div {
+            .logo span {
+                font-size: 48px;
+
+                margin-right: 12px;
+            }
+
+            .navbar nav {
+                width: 100%;
+
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+            .navbar nav a {
                 font-size: 15px;
+            }
+
+            .header {
+                padding-top: 35px;
+            }
+
+            .chinese-title {
+                font-size: 25px;
             }
 
             h1 {
@@ -237,6 +337,8 @@
                 font-size: 15px;
 
                 padding: 0 20px;
+
+                margin-top: 35px;
             }
 
             .contact-container {
@@ -244,7 +346,7 @@
 
                 grid-template-columns: 1fr;
 
-                margin-top: 40px;
+                margin-top: 45px;
             }
 
             .left-box,
@@ -266,40 +368,29 @@
          เมนูด้านบน
     ========================== -->
 
-    <nav>
+    <header class="navbar">
 
         <div class="logo">
-
-            <div class="dragon">
-                龍
-            </div>
-
-            <div>
-                MY PORTFOLIO
-            </div>
-
+            <span>龍</span>
+            MY PORTFOLIO
         </div>
 
 
-       <header>
+        <nav>
 
-    <div class="logo">
-        <span>龍</span>
-        MY PORTFOLIO
-    </div>
+            <a href="index.html">หน้าหลัก</a>
 
-    <nav>
-        <a href="index.html">หน้าหลัก</a>
-        <a href="about.html">เกี่ยวกับฉัน</a>
-        <a href="portfolio.html">ผลงาน</a>
-        <a href="gallery.html">เกียรติบัตร</a>
-        <a href="contact.html">ติดต่อ</a>
-    </nav>
+            <a href="about.html">เกี่ยวกับฉัน</a>
 
-</header>
+            <a href="portfolio.html">ผลงาน</a>
 
-    </nav>
+            <a href="gallery.html">เกียรติบัตร</a>
 
+            <a href="contact.html">ติดต่อ</a>
+
+        </nav>
+
+    </header>
 
 
     <!-- =========================
@@ -324,7 +415,6 @@
     </div>
 
 
-
     <!-- =========================
          กล่องติดต่อ
     ========================== -->
@@ -332,12 +422,9 @@
     <div class="contact-container">
 
 
-        <!-- ===== กล่องซ้าย ===== -->
+        <!-- กล่องซ้าย -->
 
         <div class="left-box">
-
-
-            <!-- Email -->
 
             <div class="icon">
                 ✉️
@@ -351,9 +438,6 @@
                 samattakachayanit@gmail.com
             </div>
 
-
-
-            <!-- โทรศัพท์ -->
 
             <div
                 class="icon"
@@ -370,12 +454,10 @@
                 082-213-7716
             </div>
 
-
         </div>
 
 
-
-        <!-- ===== กล่องขวา ===== -->
+        <!-- กล่องขวา -->
 
         <div class="right-box">
 
@@ -399,7 +481,6 @@
             </div>
 
 
-
             <!-- Instagram -->
 
             <div class="social">
@@ -418,11 +499,9 @@
 
             </div>
 
-
         </div>
 
     </div>
-
 
 
     <!-- เส้นด้านล่าง -->
